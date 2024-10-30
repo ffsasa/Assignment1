@@ -48,9 +48,9 @@ namespace Candidate_WPF_GUI
             this.dtgJobPost.ItemsSource = jobPostingService.GetJobPostings().Select(x => new
             {
                 x.PostingId,
-                x.Description,
-                x.PostedDate,
                 x.JobPostingTitle,
+                x.PostedDate,
+                x.Description,
             });
         }
 

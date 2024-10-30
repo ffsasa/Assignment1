@@ -70,13 +70,15 @@ namespace Candidate_WPF_GUI
         {
             this.dtgCandidateProfile.ItemsSource = null;
             this.dtgCandidateProfile.ItemsSource = _candidateProfileService.GetCandidateProfiles().Select(x => new
-            {
-                x.CandidateId,
-                x.Fullname,
-                x.Birthday,
-                x.ProfileShortDescription,
-                x.ProfileUrl
-            });
+                 {
+                     x.CandidateId,
+                     x.Fullname,
+                     x.Birthday,
+                     x.ProfileShortDescription,
+                     x.ProfileUrl,
+                     x.PostingId,
+                     x.Posting
+                 });
             cbxJobPosting.ItemsSource = _jobPostingService.GetJobPostings();
             cbxJobPosting.DisplayMemberPath = "JobPostingTitle";
             cbxJobPosting.SelectedValuePath = "PostingId";
